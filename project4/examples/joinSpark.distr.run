@@ -1,0 +1,32 @@
+#!/bin/bash
+#SBATCH -A uot143
+#SBATCH --job-name="join"
+#SBATCH --output="join.distr.out"
+#SBATCH --partition=debug
+## allocate 2 nodes for the Hadoop cluster: 2 datanodes, from which 1 is namenode
+#SBATCH --nodes=2
+#SBATCH --ntasks-per-node=2
+#SBATCH --mem=5G
+#SBATCH --export=ALL 
+#SBATCH --time=29
+
+export HADOOP_CONF_DIR=/home/$USER/cometcluster
+module load hadoop/2.6.0 spark/1.5.2
+export JAVA_HOME=/lib/jvm/java
+myhadoop-configure.sh
+source /home/$USER/cometcluster/spark/spark-env.sh
+start-dfs.sh
+start-yarn.sh
+myspark start
+
+hdfs dfs -mkdir -p /user/$USER
+hdfs dfs -put e.txt /user/$USER/e.txt
+hdfs dfs -put d.txt /user/$USER/d.txt
+spark-submit --class JoinSpark --num-executors 3 join.jar /user/$USER/e.txt /user/$USER/d.txt /user/$USER/output
+rm -rf output
+mkdir output
+hdfs dfs -get /user/$USER/output/part* output
+
+stop-yarn.sh
+stop-dfs.sh
+myhadoop-cleanup.sh
