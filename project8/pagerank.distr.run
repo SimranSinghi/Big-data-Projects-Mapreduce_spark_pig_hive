@@ -1,0 +1,27 @@
+#!/bin/bash
+#SBATCH -A uot143
+#SBATCH --job-name="pagerank"
+#SBATCH --output="pagerank.distr.out"
+#SBATCH --partition=debug
+## allocate 2 nodes for the Hadoop cluster: 2 datanodes, from which 1 is namenode
+#SBATCH --nodes=2
+#SBATCH --ntasks-per-node=2
+#SBATCH --export=ALL 
+#SBATCH --time=29
+
+export HADOOP_CONF_DIR=/home/$USER/cometcluster
+module load hadoop/2.6.0 spark/1.5.2
+export JAVA_HOME=/lib/jvm/java
+myhadoop-configure.sh
+source /home/$USER/cometcluster/spark/spark-env.sh
+start-dfs.sh
+start-yarn.sh
+myspark start
+
+hdfs dfs -mkdir -p /user/$USER
+hdfs dfs -put /oasis/projects/nsf/uot143/fegaras/large-twitter.csv /user/$USER/large-twitter.csv
+spark-submit --class PageRank --num-executors 2 --executor-memory 60G pagerank.jar /user/$USER/large-twitter.csv
+
+stop-yarn.sh
+stop-dfs.sh
+myhadoop-cleanup.sh
