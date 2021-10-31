@@ -1,0 +1,511 @@
+myHadoop: Setting MH_IPOIB_TRANSFORM='s/\([^.]*\).*$/\1.ibnet/' from myhadoop.conf
+myHadoop: Setting MH_SCRATCH_DIR=/scratch/$USER/$SLURM_JOBID from myhadoop.conf
+myHadoop: Using HADOOP_HOME=/opt/hadoop/2.6.0
+myHadoop: Using MH_SCRATCH_DIR=/scratch/bhaviksamir/39055385
+myHadoop: Using JAVA_HOME=/lib/jvm/java
+myHadoop: Generating Hadoop configuration in directory in /home/bhaviksamir/cometcluster...
+myHadoop: Backing up old config dir to /home/bhaviksamir/cometcluster.7...
+'/home/bhaviksamir/cometcluster' -> '/home/bhaviksamir/cometcluster.7'
+myHadoop: Designating comet-14-01.ibnet as master node (namenode, secondary namenode, and jobtracker)
+myHadoop: The following nodes will be slaves (datanode, tasktracer):
+comet-14-01.ibnet
+comet-14-02.ibnet
+21/04/08 20:36:50 INFO namenode.NameNode: STARTUP_MSG: 
+/************************************************************
+STARTUP_MSG: Starting NameNode
+STARTUP_MSG:   host = comet-14-01.sdsc.edu/198.202.112.231
+STARTUP_MSG:   args = [-format]
+STARTUP_MSG:   version = 2.6.0
+STARTUP_MSG:   classpath = /home/bhaviksamir/cometcluster:/opt/hadoop/2.6.0/share/hadoop/common/lib/jersey-core-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/api-util-1.0.0-M20.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jetty-6.1.26.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/junit-4.11.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/slf4j-api-1.7.5.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/netty-3.6.2.Final.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/activation-1.1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jettison-1.1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/guava-11.0.2.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/curator-framework-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jersey-server-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-compress-1.4.1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jsch-0.1.42.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jaxb-impl-2.2.3-1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/htrace-core-3.0.4.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/apacheds-i18n-2.0.0-M15.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jasper-compiler-5.5.23.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-codec-1.4.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-lang-2.6.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/xz-1.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/httpclient-4.2.5.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/asm-3.2.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/hamcrest-core-1.3.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jets3t-0.9.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/curator-recipes-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jackson-mapper-asl-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jsr305-1.3.9.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jaxb-api-2.2.2.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jackson-jaxrs-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/hadoop-annotations-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-cli-1.2.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/curator-client-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/hadoop-auth-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-digester-1.8.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-el-1.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/protobuf-java-2.5.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-httpclient-3.1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-logging-1.1.3.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jackson-core-asl-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jetty-util-6.1.26.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-collections-3.2.1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/avro-1.7.4.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/httpcore-4.2.5.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/xmlenc-0.52.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-configuration-1.6.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/paranamer-2.3.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/slf4j-log4j12-1.7.5.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/mockito-all-1.8.5.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-beanutils-1.7.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/log4j-1.2.17.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-io-2.4.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jersey-json-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-net-3.1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/java-xmlbuilder-0.4.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/zookeeper-3.4.6.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jackson-xc-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/servlet-api-2.5.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/api-asn1-api-1.0.0-M20.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jsp-api-2.1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/snappy-java-1.0.4.1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/gson-2.2.4.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/stax-api-1.0-2.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/jasper-runtime-5.5.23.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-beanutils-core-1.8.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/commons-math3-3.1.1.jar:/opt/hadoop/2.6.0/share/hadoop/common/lib/apacheds-kerberos-codec-2.0.0-M15.jar:/opt/hadoop/2.6.0/share/hadoop/common/hadoop-nfs-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/hadoop-common-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/common/hadoop-common-2.6.0-tests.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/jersey-core-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/jetty-6.1.26.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/netty-3.6.2.Final.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/guava-11.0.2.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/jersey-server-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/xml-apis-1.3.04.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/htrace-core-3.0.4.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/commons-codec-1.4.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/commons-daemon-1.0.13.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/commons-lang-2.6.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/asm-3.2.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/jackson-mapper-asl-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/jsr305-1.3.9.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/commons-cli-1.2.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/commons-el-1.0.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/protobuf-java-2.5.0.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/commons-logging-1.1.3.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/jackson-core-asl-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/jetty-util-6.1.26.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/xmlenc-0.52.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/log4j-1.2.17.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/commons-io-2.4.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/servlet-api-2.5.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/xercesImpl-2.9.1.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/jsp-api-2.1.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/lib/jasper-runtime-5.5.23.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/hadoop-hdfs-nfs-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/hadoop-hdfs-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/hdfs/hadoop-hdfs-2.6.0-tests.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jersey-core-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/guice-servlet-3.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jetty-6.1.26.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/netty-3.6.2.Final.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/activation-1.1.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jettison-1.1.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/guava-11.0.2.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jersey-server-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/commons-compress-1.4.1.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jaxb-impl-2.2.3-1.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/commons-codec-1.4.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/commons-lang-2.6.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/xz-1.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/asm-3.2.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jersey-client-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/aopalliance-1.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jackson-mapper-asl-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jsr305-1.3.9.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jersey-guice-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jaxb-api-2.2.2.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jackson-jaxrs-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/commons-cli-1.2.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/leveldbjni-all-1.8.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/protobuf-java-2.5.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/commons-httpclient-3.1.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/commons-logging-1.1.3.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jackson-core-asl-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jetty-util-6.1.26.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/commons-collections-3.2.1.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/javax.inject-1.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/guice-3.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/log4j-1.2.17.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/commons-io-2.4.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jersey-json-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/zookeeper-3.4.6.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jackson-xc-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/servlet-api-2.5.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/stax-api-1.0-2.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/lib/jline-0.9.94.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-server-applicationhistoryservice-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-registry-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-api-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-server-resourcemanager-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-common-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-client-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-server-web-proxy-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-applications-unmanaged-am-launcher-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-applications-distributedshell-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-server-nodemanager-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-server-tests-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/yarn/hadoop-yarn-server-common-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/jersey-core-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/guice-servlet-3.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/junit-4.11.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/netty-3.6.2.Final.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/jersey-server-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/commons-compress-1.4.1.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/xz-1.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/asm-3.2.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/hamcrest-core-1.3.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/aopalliance-1.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/jackson-mapper-asl-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/jersey-guice-1.9.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/hadoop-annotations-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/leveldbjni-all-1.8.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/protobuf-java-2.5.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/jackson-core-asl-1.9.13.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/avro-1.7.4.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/paranamer-2.3.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/javax.inject-1.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/guice-3.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/log4j-1.2.17.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/commons-io-2.4.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/lib/snappy-java-1.0.4.1.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/hadoop-mapreduce-client-shuffle-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/hadoop-mapreduce-client-core-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/hadoop-mapreduce-client-app-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-plugins-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/hadoop-mapreduce-client-common-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-2.6.0.jar:/opt/hadoop/2.6.0/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-2.6.0-tests.jar:/opt/hadoop/2.6.0/contrib/capacity-scheduler/*.jar
+STARTUP_MSG:   build = https://git-wip-us.apache.org/repos/asf/hadoop.git -r e3496499ecb8d220fba99dc5ed4c99c8f9e33bb1; compiled by 'jenkins' on 2014-11-13T21:10Z
+STARTUP_MSG:   java = 1.8.0_212
+************************************************************/
+21/04/08 20:36:50 INFO namenode.NameNode: registered UNIX signal handlers for [TERM, HUP, INT]
+21/04/08 20:36:50 INFO namenode.NameNode: createNameNode [-format]
+21/04/08 20:36:51 WARN common.Util: Path /scratch/bhaviksamir/39055385/namenode_data should be specified as a URI in configuration files. Please update hdfs configuration.
+21/04/08 20:36:51 WARN common.Util: Path /scratch/bhaviksamir/39055385/namenode_data should be specified as a URI in configuration files. Please update hdfs configuration.
+Formatting using clusterid: CID-801f9ecd-d813-4ac5-b73d-a7cbf012a8b4
+21/04/08 20:36:51 INFO namenode.FSNamesystem: No KeyProvider found.
+21/04/08 20:36:51 INFO namenode.FSNamesystem: fsLock is fair:true
+21/04/08 20:36:51 INFO blockmanagement.DatanodeManager: dfs.block.invalidate.limit=1000
+21/04/08 20:36:51 INFO blockmanagement.DatanodeManager: dfs.namenode.datanode.registration.ip-hostname-check=true
+21/04/08 20:36:51 INFO blockmanagement.BlockManager: dfs.namenode.startup.delay.block.deletion.sec is set to 000:00:00:00.000
+21/04/08 20:36:51 INFO blockmanagement.BlockManager: The block deletion will start around 2021 Apr 08 20:36:51
+21/04/08 20:36:51 INFO util.GSet: Computing capacity for map BlocksMap
+21/04/08 20:36:51 INFO util.GSet: VM type       = 64-bit
+21/04/08 20:36:51 INFO util.GSet: 2.0% max memory 889 MB = 17.8 MB
+21/04/08 20:36:51 INFO util.GSet: capacity      = 2^21 = 2097152 entries
+21/04/08 20:36:51 INFO blockmanagement.BlockManager: dfs.block.access.token.enable=false
+21/04/08 20:36:51 INFO blockmanagement.BlockManager: defaultReplication         = 3
+21/04/08 20:36:51 INFO blockmanagement.BlockManager: maxReplication             = 512
+21/04/08 20:36:51 INFO blockmanagement.BlockManager: minReplication             = 1
+21/04/08 20:36:51 INFO blockmanagement.BlockManager: maxReplicationStreams      = 2
+21/04/08 20:36:51 INFO blockmanagement.BlockManager: shouldCheckForEnoughRacks  = false
+21/04/08 20:36:51 INFO blockmanagement.BlockManager: replicationRecheckInterval = 3000
+21/04/08 20:36:51 INFO blockmanagement.BlockManager: encryptDataTransfer        = false
+21/04/08 20:36:51 INFO blockmanagement.BlockManager: maxNumBlocksToLog          = 1000
+21/04/08 20:36:51 INFO namenode.FSNamesystem: fsOwner             = bhaviksamir (auth:SIMPLE)
+21/04/08 20:36:51 INFO namenode.FSNamesystem: supergroup          = supergroup
+21/04/08 20:36:51 INFO namenode.FSNamesystem: isPermissionEnabled = true
+21/04/08 20:36:51 INFO namenode.FSNamesystem: HA Enabled: false
+21/04/08 20:36:51 INFO namenode.FSNamesystem: Append Enabled: true
+21/04/08 20:36:51 INFO util.GSet: Computing capacity for map INodeMap
+21/04/08 20:36:51 INFO util.GSet: VM type       = 64-bit
+21/04/08 20:36:51 INFO util.GSet: 1.0% max memory 889 MB = 8.9 MB
+21/04/08 20:36:51 INFO util.GSet: capacity      = 2^20 = 1048576 entries
+21/04/08 20:36:51 INFO namenode.NameNode: Caching file names occuring more than 10 times
+21/04/08 20:36:51 INFO util.GSet: Computing capacity for map cachedBlocks
+21/04/08 20:36:51 INFO util.GSet: VM type       = 64-bit
+21/04/08 20:36:51 INFO util.GSet: 0.25% max memory 889 MB = 2.2 MB
+21/04/08 20:36:51 INFO util.GSet: capacity      = 2^18 = 262144 entries
+21/04/08 20:36:51 INFO namenode.FSNamesystem: dfs.namenode.safemode.threshold-pct = 0.9990000128746033
+21/04/08 20:36:51 INFO namenode.FSNamesystem: dfs.namenode.safemode.min.datanodes = 0
+21/04/08 20:36:51 INFO namenode.FSNamesystem: dfs.namenode.safemode.extension     = 30000
+21/04/08 20:36:51 INFO namenode.FSNamesystem: Retry cache on namenode is enabled
+21/04/08 20:36:51 INFO namenode.FSNamesystem: Retry cache will use 0.03 of total heap and retry cache entry expiry time is 600000 millis
+21/04/08 20:36:51 INFO util.GSet: Computing capacity for map NameNodeRetryCache
+21/04/08 20:36:51 INFO util.GSet: VM type       = 64-bit
+21/04/08 20:36:51 INFO util.GSet: 0.029999999329447746% max memory 889 MB = 273.1 KB
+21/04/08 20:36:51 INFO util.GSet: capacity      = 2^15 = 32768 entries
+21/04/08 20:36:51 INFO namenode.NNConf: ACLs enabled? false
+21/04/08 20:36:51 INFO namenode.NNConf: XAttrs enabled? true
+21/04/08 20:36:51 INFO namenode.NNConf: Maximum size of an xattr: 16384
+21/04/08 20:36:51 INFO namenode.FSImage: Allocated new BlockPoolId: BP-2042645950-198.202.112.231-1617939411412
+21/04/08 20:36:51 INFO common.Storage: Storage directory /scratch/bhaviksamir/39055385/namenode_data has been successfully formatted.
+21/04/08 20:36:51 INFO namenode.NNStorageRetentionManager: Going to retain 1 images with txid >= 0
+21/04/08 20:36:51 INFO util.ExitUtil: Exiting with status 0
+21/04/08 20:36:51 INFO namenode.NameNode: SHUTDOWN_MSG: 
+/************************************************************
+SHUTDOWN_MSG: Shutting down NameNode at comet-14-01.sdsc.edu/198.202.112.231
+************************************************************/
+myHadoop:  
+myHadoop: Enabling experimental Spark support
+myHadoop: Using SPARK_CONF_DIR=/home/bhaviksamir/cometcluster/spark
+myHadoop:  
+To use Spark, you will want to type the following commands:"
+  source /home/bhaviksamir/cometcluster/spark/spark-env.sh
+  myspark start
+Starting namenodes on [comet-14-01.ibnet]
+comet-14-01.ibnet: starting namenode, logging to /scratch/bhaviksamir/39055385/logs/hadoop-bhaviksamir-namenode-comet-14-01.sdsc.edu.out
+comet-14-01.ibnet: starting datanode, logging to /scratch/bhaviksamir/39055385/logs/hadoop-bhaviksamir-datanode-comet-14-01.sdsc.edu.out
+comet-14-02.ibnet: starting datanode, logging to /scratch/bhaviksamir/39055385/logs/hadoop-bhaviksamir-datanode-comet-14-02.sdsc.edu.out
+Starting secondary namenodes [comet-14-01.ibnet]
+comet-14-01.ibnet: starting secondarynamenode, logging to /scratch/bhaviksamir/39055385/logs/hadoop-bhaviksamir-secondarynamenode-comet-14-01.sdsc.edu.out
+starting yarn daemons
+starting resourcemanager, logging to /scratch/bhaviksamir/39055385/logs/yarn-bhaviksamir-resourcemanager-comet-14-01.out
+comet-14-02.ibnet: starting nodemanager, logging to /scratch/bhaviksamir/39055385/logs/yarn-bhaviksamir-nodemanager-comet-14-02.sdsc.edu.out
+comet-14-01.ibnet: starting nodemanager, logging to /scratch/bhaviksamir/39055385/logs/yarn-bhaviksamir-nodemanager-comet-14-01.sdsc.edu.out
+mySpark: Using /home/bhaviksamir/cometcluster/spark/slaves as our slaves file
+mySpark: Reading in /home/bhaviksamir/cometcluster/spark/spark-env.sh as our slaves file
+starting org.apache.spark.deploy.master.Master, logging to /scratch/bhaviksamir/39055385/logs/spark-bhaviksamir-org.apache.spark.deploy.master.Master-1-comet-14-01.out
+mySpark: Starting worker on comet-14-01.ibnet:
+  /opt/spark/1.5.2/sbin/spark-daemon.sh --config /home/bhaviksamir/cometcluster/spark start org.apache.spark.deploy.worker.Worker 1 spark://comet-14-01.ibnet:7077
+starting org.apache.spark.deploy.worker.Worker, logging to /scratch/bhaviksamir/39055385/logs/spark-bhaviksamir-org.apache.spark.deploy.worker.Worker-1-comet-14-01.sdsc.edu.out
+failed to launch org.apache.spark.deploy.worker.Worker:
+  /opt/spark/1.5.2/sbin/../bin/spark-class: line 77: /usr/java/latest/bin/java: No such file or directory
+full log in /scratch/bhaviksamir/39055385/logs/spark-bhaviksamir-org.apache.spark.deploy.worker.Worker-1-comet-14-01.sdsc.edu.out
+mySpark: Starting worker on comet-14-02.ibnet:
+  /opt/spark/1.5.2/sbin/spark-daemon.sh --config /home/bhaviksamir/cometcluster/spark start org.apache.spark.deploy.worker.Worker 1 spark://comet-14-01.ibnet:7077
+starting org.apache.spark.deploy.worker.Worker, logging to /scratch/bhaviksamir/39055385/logs/spark-bhaviksamir-org.apache.spark.deploy.worker.Worker-1-comet-14-02.sdsc.edu.out
+failed to launch org.apache.spark.deploy.worker.Worker:
+  /opt/spark/1.5.2/sbin/../bin/spark-class: line 77: /usr/java/latest/bin/java: No such file or directory
+full log in /scratch/bhaviksamir/39055385/logs/spark-bhaviksamir-org.apache.spark.deploy.worker.Worker-1-comet-14-02.sdsc.edu.out
+mkdir: Permission denied: user=bhaviksamir, access=WRITE, inode="/user":axk3516:supergroup:drwxr-xr-x
+put: `/user/bhaviksamir/large-graph.csv': No such file or directory
+21/04/08 20:37:24 INFO spark.SparkContext: Running Spark version 1.5.2
+21/04/08 20:37:24 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+21/04/08 20:37:24 INFO spark.SecurityManager: Changing view acls to: bhaviksamir
+21/04/08 20:37:24 INFO spark.SecurityManager: Changing modify acls to: bhaviksamir
+21/04/08 20:37:24 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(bhaviksamir); users with modify permissions: Set(bhaviksamir)
+21/04/08 20:37:25 INFO slf4j.Slf4jLogger: Slf4jLogger started
+21/04/08 20:37:25 INFO Remoting: Starting remoting
+21/04/08 20:37:25 INFO Remoting: Remoting started; listening on addresses :[akka.tcp://sparkDriver@10.22.252.158:33732]
+21/04/08 20:37:25 INFO util.Utils: Successfully started service 'sparkDriver' on port 33732.
+21/04/08 20:37:25 INFO spark.SparkEnv: Registering MapOutputTracker
+21/04/08 20:37:25 INFO spark.SparkEnv: Registering BlockManagerMaster
+21/04/08 20:37:25 INFO storage.DiskBlockManager: Created local directory at /tmp/blockmgr-3357ef65-181a-4e67-b591-ab3223c993d8
+21/04/08 20:37:25 INFO storage.MemoryStore: MemoryStore started with capacity 530.0 MB
+21/04/08 20:37:25 INFO spark.HttpFileServer: HTTP File server directory is /tmp/spark-0dcfafaf-6888-4c80-b726-e08074c2926c/httpd-2bf9dbe0-bd1d-4ef3-9bf4-d6cda0491030
+21/04/08 20:37:25 INFO spark.HttpServer: Starting HTTP Server
+21/04/08 20:37:25 INFO server.Server: jetty-8.y.z-SNAPSHOT
+21/04/08 20:37:25 INFO server.AbstractConnector: Started SocketConnector@0.0.0.0:46611
+21/04/08 20:37:25 INFO util.Utils: Successfully started service 'HTTP file server' on port 46611.
+21/04/08 20:37:25 INFO spark.SparkEnv: Registering OutputCommitCoordinator
+21/04/08 20:37:25 INFO server.Server: jetty-8.y.z-SNAPSHOT
+21/04/08 20:37:25 WARN component.AbstractLifeCycle: FAILED SelectChannelConnector@0.0.0.0:4040: java.net.BindException: Address already in use
+java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.spark-project.jetty.server.nio.SelectChannelConnector.open(SelectChannelConnector.java:187)
+	at org.spark-project.jetty.server.AbstractConnector.doStart(AbstractConnector.java:316)
+	at org.spark-project.jetty.server.nio.SelectChannelConnector.doStart(SelectChannelConnector.java:265)
+	at org.spark-project.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.spark-project.jetty.server.Server.doStart(Server.java:293)
+	at org.spark-project.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.apache.spark.ui.JettyUtils$.org$apache$spark$ui$JettyUtils$$connect$1(JettyUtils.scala:236)
+	at org.apache.spark.ui.JettyUtils$$anonfun$3.apply(JettyUtils.scala:246)
+	at org.apache.spark.ui.JettyUtils$$anonfun$3.apply(JettyUtils.scala:246)
+	at org.apache.spark.util.Utils$$anonfun$startServiceOnPort$1.apply$mcVI$sp(Utils.scala:1920)
+	at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:141)
+	at org.apache.spark.util.Utils$.startServiceOnPort(Utils.scala:1911)
+	at org.apache.spark.ui.JettyUtils$.startJettyServer(JettyUtils.scala:246)
+	at org.apache.spark.ui.WebUI.bind(WebUI.scala:136)
+	at org.apache.spark.SparkContext$$anonfun$13.apply(SparkContext.scala:474)
+	at org.apache.spark.SparkContext$$anonfun$13.apply(SparkContext.scala:474)
+	at scala.Option.foreach(Option.scala:236)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:474)
+	at Graph$.main(Graph.scala:12)
+	at Graph.main(Graph.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:674)
+	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:180)
+	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:205)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:120)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+21/04/08 20:37:25 WARN component.AbstractLifeCycle: FAILED org.spark-project.jetty.server.Server@6f2cb653: java.net.BindException: Address already in use
+java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.spark-project.jetty.server.nio.SelectChannelConnector.open(SelectChannelConnector.java:187)
+	at org.spark-project.jetty.server.AbstractConnector.doStart(AbstractConnector.java:316)
+	at org.spark-project.jetty.server.nio.SelectChannelConnector.doStart(SelectChannelConnector.java:265)
+	at org.spark-project.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.spark-project.jetty.server.Server.doStart(Server.java:293)
+	at org.spark-project.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.apache.spark.ui.JettyUtils$.org$apache$spark$ui$JettyUtils$$connect$1(JettyUtils.scala:236)
+	at org.apache.spark.ui.JettyUtils$$anonfun$3.apply(JettyUtils.scala:246)
+	at org.apache.spark.ui.JettyUtils$$anonfun$3.apply(JettyUtils.scala:246)
+	at org.apache.spark.util.Utils$$anonfun$startServiceOnPort$1.apply$mcVI$sp(Utils.scala:1920)
+	at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:141)
+	at org.apache.spark.util.Utils$.startServiceOnPort(Utils.scala:1911)
+	at org.apache.spark.ui.JettyUtils$.startJettyServer(JettyUtils.scala:246)
+	at org.apache.spark.ui.WebUI.bind(WebUI.scala:136)
+	at org.apache.spark.SparkContext$$anonfun$13.apply(SparkContext.scala:474)
+	at org.apache.spark.SparkContext$$anonfun$13.apply(SparkContext.scala:474)
+	at scala.Option.foreach(Option.scala:236)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:474)
+	at Graph$.main(Graph.scala:12)
+	at Graph.main(Graph.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:674)
+	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:180)
+	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:205)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:120)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+21/04/08 20:37:25 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/stages/stage/kill,null}
+21/04/08 20:37:25 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/api,null}
+21/04/08 20:37:25 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/,null}
+21/04/08 20:37:25 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/static,null}
+21/04/08 20:37:25 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/executors/threadDump/json,null}
+21/04/08 20:37:25 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/executors/threadDump,null}
+21/04/08 20:37:25 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/executors/json,null}
+21/04/08 20:37:25 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/executors,null}
+21/04/08 20:37:25 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/environment/json,null}
+21/04/08 20:37:25 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/environment,null}
+21/04/08 20:37:25 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/storage/rdd/json,null}
+21/04/08 20:37:25 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/storage/rdd,null}
+21/04/08 20:37:25 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/storage/json,null}
+21/04/08 20:37:25 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/storage,null}
+21/04/08 20:37:25 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/stages/pool/json,null}
+21/04/08 20:37:25 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/stages/pool,null}
+21/04/08 20:37:25 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/stages/stage/json,null}
+21/04/08 20:37:25 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/stages/stage,null}
+21/04/08 20:37:25 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/stages/json,null}
+21/04/08 20:37:25 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/stages,null}
+21/04/08 20:37:25 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/jobs/job/json,null}
+21/04/08 20:37:25 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/jobs/job,null}
+21/04/08 20:37:25 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/jobs/json,null}
+21/04/08 20:37:25 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/jobs,null}
+21/04/08 20:37:25 WARN util.Utils: Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+21/04/08 20:37:25 INFO server.Server: jetty-8.y.z-SNAPSHOT
+21/04/08 20:37:25 WARN component.AbstractLifeCycle: FAILED SelectChannelConnector@0.0.0.0:4041: java.net.BindException: Address already in use
+java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.spark-project.jetty.server.nio.SelectChannelConnector.open(SelectChannelConnector.java:187)
+	at org.spark-project.jetty.server.AbstractConnector.doStart(AbstractConnector.java:316)
+	at org.spark-project.jetty.server.nio.SelectChannelConnector.doStart(SelectChannelConnector.java:265)
+	at org.spark-project.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.spark-project.jetty.server.Server.doStart(Server.java:293)
+	at org.spark-project.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.apache.spark.ui.JettyUtils$.org$apache$spark$ui$JettyUtils$$connect$1(JettyUtils.scala:236)
+	at org.apache.spark.ui.JettyUtils$$anonfun$3.apply(JettyUtils.scala:246)
+	at org.apache.spark.ui.JettyUtils$$anonfun$3.apply(JettyUtils.scala:246)
+	at org.apache.spark.util.Utils$$anonfun$startServiceOnPort$1.apply$mcVI$sp(Utils.scala:1920)
+	at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:141)
+	at org.apache.spark.util.Utils$.startServiceOnPort(Utils.scala:1911)
+	at org.apache.spark.ui.JettyUtils$.startJettyServer(JettyUtils.scala:246)
+	at org.apache.spark.ui.WebUI.bind(WebUI.scala:136)
+	at org.apache.spark.SparkContext$$anonfun$13.apply(SparkContext.scala:474)
+	at org.apache.spark.SparkContext$$anonfun$13.apply(SparkContext.scala:474)
+	at scala.Option.foreach(Option.scala:236)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:474)
+	at Graph$.main(Graph.scala:12)
+	at Graph.main(Graph.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:674)
+	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:180)
+	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:205)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:120)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+21/04/08 20:37:25 WARN component.AbstractLifeCycle: FAILED org.spark-project.jetty.server.Server@7a8fa663: java.net.BindException: Address already in use
+java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.spark-project.jetty.server.nio.SelectChannelConnector.open(SelectChannelConnector.java:187)
+	at org.spark-project.jetty.server.AbstractConnector.doStart(AbstractConnector.java:316)
+	at org.spark-project.jetty.server.nio.SelectChannelConnector.doStart(SelectChannelConnector.java:265)
+	at org.spark-project.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.spark-project.jetty.server.Server.doStart(Server.java:293)
+	at org.spark-project.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.apache.spark.ui.JettyUtils$.org$apache$spark$ui$JettyUtils$$connect$1(JettyUtils.scala:236)
+	at org.apache.spark.ui.JettyUtils$$anonfun$3.apply(JettyUtils.scala:246)
+	at org.apache.spark.ui.JettyUtils$$anonfun$3.apply(JettyUtils.scala:246)
+	at org.apache.spark.util.Utils$$anonfun$startServiceOnPort$1.apply$mcVI$sp(Utils.scala:1920)
+	at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:141)
+	at org.apache.spark.util.Utils$.startServiceOnPort(Utils.scala:1911)
+	at org.apache.spark.ui.JettyUtils$.startJettyServer(JettyUtils.scala:246)
+	at org.apache.spark.ui.WebUI.bind(WebUI.scala:136)
+	at org.apache.spark.SparkContext$$anonfun$13.apply(SparkContext.scala:474)
+	at org.apache.spark.SparkContext$$anonfun$13.apply(SparkContext.scala:474)
+	at scala.Option.foreach(Option.scala:236)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:474)
+	at Graph$.main(Graph.scala:12)
+	at Graph.main(Graph.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:674)
+	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:180)
+	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:205)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:120)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+21/04/08 20:37:25 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/stages/stage/kill,null}
+21/04/08 20:37:25 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/api,null}
+21/04/08 20:37:25 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/,null}
+21/04/08 20:37:25 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/static,null}
+21/04/08 20:37:25 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/executors/threadDump/json,null}
+21/04/08 20:37:25 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/executors/threadDump,null}
+21/04/08 20:37:25 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/executors/json,null}
+21/04/08 20:37:25 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/executors,null}
+21/04/08 20:37:25 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/environment/json,null}
+21/04/08 20:37:25 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/environment,null}
+21/04/08 20:37:25 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/storage/rdd/json,null}
+21/04/08 20:37:25 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/storage/rdd,null}
+21/04/08 20:37:25 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/storage/json,null}
+21/04/08 20:37:25 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/storage,null}
+21/04/08 20:37:25 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/stages/pool/json,null}
+21/04/08 20:37:25 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/stages/pool,null}
+21/04/08 20:37:25 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/stages/stage/json,null}
+21/04/08 20:37:25 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/stages/stage,null}
+21/04/08 20:37:25 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/stages/json,null}
+21/04/08 20:37:25 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/stages,null}
+21/04/08 20:37:25 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/jobs/job/json,null}
+21/04/08 20:37:25 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/jobs/job,null}
+21/04/08 20:37:25 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/jobs/json,null}
+21/04/08 20:37:25 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/jobs,null}
+21/04/08 20:37:25 WARN util.Utils: Service 'SparkUI' could not bind on port 4041. Attempting port 4042.
+21/04/08 20:37:25 INFO server.Server: jetty-8.y.z-SNAPSHOT
+21/04/08 20:37:25 INFO server.AbstractConnector: Started SelectChannelConnector@0.0.0.0:4042
+21/04/08 20:37:25 INFO util.Utils: Successfully started service 'SparkUI' on port 4042.
+21/04/08 20:37:25 INFO ui.SparkUI: Started SparkUI at http://10.22.252.158:4042
+21/04/08 20:37:25 INFO spark.SparkContext: Added JAR file:/home/bhaviksamir/project5/graph.jar at http://10.22.252.158:46611/jars/graph.jar with timestamp 1617939445993
+21/04/08 20:37:26 WARN metrics.MetricsSystem: Using default name DAGScheduler for source because spark.app.id is not set.
+21/04/08 20:37:26 INFO client.AppClient$ClientEndpoint: Connecting to master spark://comet-14-01.ibnet:7077...
+21/04/08 20:37:26 INFO cluster.SparkDeploySchedulerBackend: Connected to Spark cluster with app ID app-20210408203726-0001
+21/04/08 20:37:26 INFO util.Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 40877.
+21/04/08 20:37:26 INFO netty.NettyBlockTransferService: Server created on 40877
+21/04/08 20:37:26 INFO storage.BlockManagerMaster: Trying to register BlockManager
+21/04/08 20:37:26 INFO storage.BlockManagerMasterEndpoint: Registering block manager 10.22.252.158:40877 with 530.0 MB RAM, BlockManagerId(driver, 10.22.252.158, 40877)
+21/04/08 20:37:26 INFO storage.BlockManagerMaster: Registered BlockManager
+21/04/08 20:37:26 INFO cluster.SparkDeploySchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.0
+21/04/08 20:37:26 INFO client.AppClient$ClientEndpoint: Executor added: app-20210408203726-0001/0 on worker-20210408203719-10.22.252.157-46469 (10.22.252.157:46469) with 24 cores
+21/04/08 20:37:26 INFO cluster.SparkDeploySchedulerBackend: Granted executor ID app-20210408203726-0001/0 on hostPort 10.22.252.157:46469 with 24 cores, 1024.0 MB RAM
+21/04/08 20:37:26 INFO client.AppClient$ClientEndpoint: Executor added: app-20210408203726-0001/1 on worker-20210408203109-10.22.252.157-36635 (10.22.252.157:36635) with 24 cores
+21/04/08 20:37:26 INFO cluster.SparkDeploySchedulerBackend: Granted executor ID app-20210408203726-0001/1 on hostPort 10.22.252.157:36635 with 24 cores, 1024.0 MB RAM
+21/04/08 20:37:26 INFO client.AppClient$ClientEndpoint: Executor added: app-20210408203726-0001/2 on worker-20210408203717-10.22.252.158-35026 (10.22.252.158:35026) with 24 cores
+21/04/08 20:37:26 INFO cluster.SparkDeploySchedulerBackend: Granted executor ID app-20210408203726-0001/2 on hostPort 10.22.252.158:35026 with 24 cores, 1024.0 MB RAM
+21/04/08 20:37:26 INFO client.AppClient$ClientEndpoint: Executor added: app-20210408203726-0001/3 on worker-20210408203106-10.22.252.158-33098 (10.22.252.158:33098) with 24 cores
+21/04/08 20:37:26 INFO cluster.SparkDeploySchedulerBackend: Granted executor ID app-20210408203726-0001/3 on hostPort 10.22.252.158:33098 with 24 cores, 1024.0 MB RAM
+21/04/08 20:37:26 INFO client.AppClient$ClientEndpoint: Executor updated: app-20210408203726-0001/0 is now RUNNING
+21/04/08 20:37:26 INFO client.AppClient$ClientEndpoint: Executor updated: app-20210408203726-0001/1 is now RUNNING
+21/04/08 20:37:26 INFO client.AppClient$ClientEndpoint: Executor updated: app-20210408203726-0001/2 is now RUNNING
+21/04/08 20:37:26 INFO client.AppClient$ClientEndpoint: Executor updated: app-20210408203726-0001/3 is now RUNNING
+21/04/08 20:37:26 INFO client.AppClient$ClientEndpoint: Executor updated: app-20210408203726-0001/1 is now LOADING
+21/04/08 20:37:26 INFO client.AppClient$ClientEndpoint: Executor updated: app-20210408203726-0001/3 is now LOADING
+21/04/08 20:37:26 INFO client.AppClient$ClientEndpoint: Executor updated: app-20210408203726-0001/2 is now LOADING
+21/04/08 20:37:26 INFO client.AppClient$ClientEndpoint: Executor updated: app-20210408203726-0001/0 is now LOADING
+21/04/08 20:37:26 INFO storage.MemoryStore: ensureFreeSpace(120176) called with curMem=0, maxMem=555755765
+21/04/08 20:37:26 INFO storage.MemoryStore: Block broadcast_0 stored as values in memory (estimated size 117.4 KB, free 529.9 MB)
+21/04/08 20:37:26 INFO storage.MemoryStore: ensureFreeSpace(12937) called with curMem=120176, maxMem=555755765
+21/04/08 20:37:26 INFO storage.MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 12.6 KB, free 529.9 MB)
+21/04/08 20:37:26 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on 10.22.252.158:40877 (size: 12.6 KB, free: 530.0 MB)
+21/04/08 20:37:26 INFO spark.SparkContext: Created broadcast 0 from textFile at Graph.scala:15
+Exception in thread "main" org.apache.hadoop.mapred.InvalidInputException: Input path does not exist: hdfs://comet-14-01.ibnet:54310/user/bhaviksamir/large-graph.csv
+	at org.apache.hadoop.mapred.FileInputFormat.singleThreadedListStatus(FileInputFormat.java:285)
+	at org.apache.hadoop.mapred.FileInputFormat.listStatus(FileInputFormat.java:228)
+	at org.apache.hadoop.mapred.FileInputFormat.getSplits(FileInputFormat.java:304)
+	at org.apache.spark.rdd.HadoopRDD.getPartitions(HadoopRDD.scala:207)
+	at org.apache.spark.rdd.RDD$$anonfun$partitions$2.apply(RDD.scala:239)
+	at org.apache.spark.rdd.RDD$$anonfun$partitions$2.apply(RDD.scala:237)
+	at scala.Option.getOrElse(Option.scala:120)
+	at org.apache.spark.rdd.RDD.partitions(RDD.scala:237)
+	at org.apache.spark.rdd.MapPartitionsRDD.getPartitions(MapPartitionsRDD.scala:35)
+	at org.apache.spark.rdd.RDD$$anonfun$partitions$2.apply(RDD.scala:239)
+	at org.apache.spark.rdd.RDD$$anonfun$partitions$2.apply(RDD.scala:237)
+	at scala.Option.getOrElse(Option.scala:120)
+	at org.apache.spark.rdd.RDD.partitions(RDD.scala:237)
+	at org.apache.spark.rdd.MapPartitionsRDD.getPartitions(MapPartitionsRDD.scala:35)
+	at org.apache.spark.rdd.RDD$$anonfun$partitions$2.apply(RDD.scala:239)
+	at org.apache.spark.rdd.RDD$$anonfun$partitions$2.apply(RDD.scala:237)
+	at scala.Option.getOrElse(Option.scala:120)
+	at org.apache.spark.rdd.RDD.partitions(RDD.scala:237)
+	at org.apache.spark.Partitioner$.defaultPartitioner(Partitioner.scala:65)
+	at org.apache.spark.rdd.PairRDDFunctions$$anonfun$groupByKey$3.apply(PairRDDFunctions.scala:587)
+	at org.apache.spark.rdd.PairRDDFunctions$$anonfun$groupByKey$3.apply(PairRDDFunctions.scala:587)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:147)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:108)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:310)
+	at org.apache.spark.rdd.PairRDDFunctions.groupByKey(PairRDDFunctions.scala:586)
+	at Graph$.main(Graph.scala:20)
+	at Graph.main(Graph.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:674)
+	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:180)
+	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:205)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:120)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+21/04/08 20:37:27 INFO spark.SparkContext: Invoking stop() from shutdown hook
+21/04/08 20:37:27 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/metrics/json,null}
+21/04/08 20:37:27 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/stages/stage/kill,null}
+21/04/08 20:37:27 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/api,null}
+21/04/08 20:37:27 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/,null}
+21/04/08 20:37:27 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/static,null}
+21/04/08 20:37:27 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/executors/threadDump/json,null}
+21/04/08 20:37:27 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/executors/threadDump,null}
+21/04/08 20:37:27 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/executors/json,null}
+21/04/08 20:37:27 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/executors,null}
+21/04/08 20:37:27 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/environment/json,null}
+21/04/08 20:37:27 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/environment,null}
+21/04/08 20:37:27 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/storage/rdd/json,null}
+21/04/08 20:37:27 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/storage/rdd,null}
+21/04/08 20:37:27 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/storage/json,null}
+21/04/08 20:37:27 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/storage,null}
+21/04/08 20:37:27 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/stages/pool/json,null}
+21/04/08 20:37:27 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/stages/pool,null}
+21/04/08 20:37:27 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/stages/stage/json,null}
+21/04/08 20:37:27 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/stages/stage,null}
+21/04/08 20:37:27 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/stages/json,null}
+21/04/08 20:37:27 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/stages,null}
+21/04/08 20:37:27 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/jobs/job/json,null}
+21/04/08 20:37:27 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/jobs/job,null}
+21/04/08 20:37:27 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/jobs/json,null}
+21/04/08 20:37:27 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/jobs,null}
+21/04/08 20:37:27 INFO ui.SparkUI: Stopped Spark web UI at http://10.22.252.158:4042
+21/04/08 20:37:27 INFO scheduler.DAGScheduler: Stopping DAGScheduler
+21/04/08 20:37:27 INFO cluster.SparkDeploySchedulerBackend: Shutting down all executors
+21/04/08 20:37:27 INFO cluster.SparkDeploySchedulerBackend: Asking each executor to shut down
+21/04/08 20:37:27 INFO spark.MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+21/04/08 20:37:27 INFO storage.MemoryStore: MemoryStore cleared
+21/04/08 20:37:27 INFO storage.BlockManager: BlockManager stopped
+21/04/08 20:37:27 INFO storage.BlockManagerMaster: BlockManagerMaster stopped
+21/04/08 20:37:27 INFO spark.SparkContext: Successfully stopped SparkContext
+21/04/08 20:37:27 INFO util.ShutdownHookManager: Shutdown hook called
+21/04/08 20:37:27 INFO util.ShutdownHookManager: Deleting directory /tmp/spark-0dcfafaf-6888-4c80-b726-e08074c2926c
+21/04/08 20:37:27 INFO scheduler.OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+stopping yarn daemons
+no resourcemanager to stop
+comet-14-01.ibnet: no nodemanager to stop
+comet-14-02.ibnet: no nodemanager to stop
+no proxyserver to stop
+Stopping namenodes on [comet-14-01.ibnet]
+comet-14-01.ibnet: no namenode to stop
+comet-14-01.ibnet: no datanode to stop
+comet-14-02.ibnet: no datanode to stop
+Stopping secondary namenodes [comet-14-01.ibnet]
+comet-14-01.ibnet: no secondarynamenode to stop
+Copying Hadoop logs back to /home/bhaviksamir/cometcluster/logs...
+'/scratch/bhaviksamir/39055385/logs' -> '/home/bhaviksamir/cometcluster/logs'
+'/scratch/bhaviksamir/39055385/logs/hadoop-bhaviksamir-secondarynamenode-comet-14-01.sdsc.edu.log' -> '/home/bhaviksamir/cometcluster/logs/hadoop-bhaviksamir-secondarynamenode-comet-14-01.sdsc.edu.log'
+'/scratch/bhaviksamir/39055385/logs/hadoop-bhaviksamir-namenode-comet-14-01.sdsc.edu.out' -> '/home/bhaviksamir/cometcluster/logs/hadoop-bhaviksamir-namenode-comet-14-01.sdsc.edu.out'
+'/scratch/bhaviksamir/39055385/logs/SecurityAuth-bhaviksamir.audit' -> '/home/bhaviksamir/cometcluster/logs/SecurityAuth-bhaviksamir.audit'
+'/scratch/bhaviksamir/39055385/logs/yarn-bhaviksamir-nodemanager-comet-14-01.sdsc.edu.log' -> '/home/bhaviksamir/cometcluster/logs/yarn-bhaviksamir-nodemanager-comet-14-01.sdsc.edu.log'
+'/scratch/bhaviksamir/39055385/logs/hadoop-bhaviksamir-datanode-comet-14-01.sdsc.edu.out' -> '/home/bhaviksamir/cometcluster/logs/hadoop-bhaviksamir-datanode-comet-14-01.sdsc.edu.out'
+'/scratch/bhaviksamir/39055385/logs/yarn-bhaviksamir-resourcemanager-comet-14-01.out' -> '/home/bhaviksamir/cometcluster/logs/yarn-bhaviksamir-resourcemanager-comet-14-01.out'
+'/scratch/bhaviksamir/39055385/logs/spark-bhaviksamir-org.apache.spark.deploy.worker.Worker-1-comet-14-01.sdsc.edu.out' -> '/home/bhaviksamir/cometcluster/logs/spark-bhaviksamir-org.apache.spark.deploy.worker.Worker-1-comet-14-01.sdsc.edu.out'
+'/scratch/bhaviksamir/39055385/logs/yarn-bhaviksamir-nodemanager-comet-14-01.sdsc.edu.out' -> '/home/bhaviksamir/cometcluster/logs/yarn-bhaviksamir-nodemanager-comet-14-01.sdsc.edu.out'
+'/scratch/bhaviksamir/39055385/logs/yarn-bhaviksamir-resourcemanager-comet-14-01.log' -> '/home/bhaviksamir/cometcluster/logs/yarn-bhaviksamir-resourcemanager-comet-14-01.log'
+'/scratch/bhaviksamir/39055385/logs/hadoop-bhaviksamir-datanode-comet-14-01.sdsc.edu.log' -> '/home/bhaviksamir/cometcluster/logs/hadoop-bhaviksamir-datanode-comet-14-01.sdsc.edu.log'
+'/scratch/bhaviksamir/39055385/logs/userlogs' -> '/home/bhaviksamir/cometcluster/logs/userlogs'
+'/scratch/bhaviksamir/39055385/logs/hadoop-bhaviksamir-secondarynamenode-comet-14-01.sdsc.edu.out' -> '/home/bhaviksamir/cometcluster/logs/hadoop-bhaviksamir-secondarynamenode-comet-14-01.sdsc.edu.out'
+'/scratch/bhaviksamir/39055385/logs/hadoop-bhaviksamir-namenode-comet-14-01.sdsc.edu.log' -> '/home/bhaviksamir/cometcluster/logs/hadoop-bhaviksamir-namenode-comet-14-01.sdsc.edu.log'
+'/scratch/bhaviksamir/39055385/logs/spark-bhaviksamir-org.apache.spark.deploy.master.Master-1-comet-14-01.out' -> '/home/bhaviksamir/cometcluster/logs/spark-bhaviksamir-org.apache.spark.deploy.master.Master-1-comet-14-01.out'
+removed directory: ‘/scratch/bhaviksamir/39055385/mapred_scratch/filecache’
+removed directory: ‘/scratch/bhaviksamir/39055385/mapred_scratch/usercache’
+removed directory: ‘/scratch/bhaviksamir/39055385/mapred_scratch/nmPrivate’
+removed directory: ‘/scratch/bhaviksamir/39055385/mapred_scratch’
+removed directory: ‘/scratch/bhaviksamir/39055385/tmp/dfs/namesecondary’
+removed directory: ‘/scratch/bhaviksamir/39055385/tmp/dfs’
+removed directory: ‘/scratch/bhaviksamir/39055385/tmp’
+removed ‘/scratch/bhaviksamir/39055385/namenode_data/current/seen_txid’
+removed ‘/scratch/bhaviksamir/39055385/namenode_data/current/fsimage_0000000000000000000’
+removed ‘/scratch/bhaviksamir/39055385/namenode_data/current/fsimage_0000000000000000000.md5’
+removed ‘/scratch/bhaviksamir/39055385/namenode_data/current/VERSION’
+removed directory: ‘/scratch/bhaviksamir/39055385/namenode_data/current’
+removed directory: ‘/scratch/bhaviksamir/39055385/namenode_data’
+removed directory: ‘/scratch/bhaviksamir/39055385/hdfs_data’
+removed directory: ‘/scratch/bhaviksamir/39055385/pids’
+removed ‘/scratch/bhaviksamir/39055385/logs/hadoop-bhaviksamir-secondarynamenode-comet-14-01.sdsc.edu.log’
+removed ‘/scratch/bhaviksamir/39055385/logs/hadoop-bhaviksamir-namenode-comet-14-01.sdsc.edu.out’
+removed ‘/scratch/bhaviksamir/39055385/logs/SecurityAuth-bhaviksamir.audit’
+removed ‘/scratch/bhaviksamir/39055385/logs/yarn-bhaviksamir-nodemanager-comet-14-01.sdsc.edu.log’
+removed ‘/scratch/bhaviksamir/39055385/logs/hadoop-bhaviksamir-datanode-comet-14-01.sdsc.edu.out’
+removed ‘/scratch/bhaviksamir/39055385/logs/yarn-bhaviksamir-resourcemanager-comet-14-01.out’
+removed ‘/scratch/bhaviksamir/39055385/logs/spark-bhaviksamir-org.apache.spark.deploy.worker.Worker-1-comet-14-01.sdsc.edu.out’
+removed ‘/scratch/bhaviksamir/39055385/logs/yarn-bhaviksamir-nodemanager-comet-14-01.sdsc.edu.out’
+removed ‘/scratch/bhaviksamir/39055385/logs/yarn-bhaviksamir-resourcemanager-comet-14-01.log’
+removed ‘/scratch/bhaviksamir/39055385/logs/hadoop-bhaviksamir-datanode-comet-14-01.sdsc.edu.log’
+removed directory: ‘/scratch/bhaviksamir/39055385/logs/userlogs’
+removed ‘/scratch/bhaviksamir/39055385/logs/hadoop-bhaviksamir-secondarynamenode-comet-14-01.sdsc.edu.out’
+removed ‘/scratch/bhaviksamir/39055385/logs/hadoop-bhaviksamir-namenode-comet-14-01.sdsc.edu.log’
+removed ‘/scratch/bhaviksamir/39055385/logs/spark-bhaviksamir-org.apache.spark.deploy.master.Master-1-comet-14-01.out’
+removed directory: ‘/scratch/bhaviksamir/39055385/logs’
+removed directory: ‘/scratch/bhaviksamir/39055385/mapred_scratch/filecache’
+removed directory: ‘/scratch/bhaviksamir/39055385/mapred_scratch/usercache’
+removed directory: ‘/scratch/bhaviksamir/39055385/mapred_scratch/nmPrivate’
+removed directory: ‘/scratch/bhaviksamir/39055385/mapred_scratch’
+removed directory: ‘/scratch/bhaviksamir/39055385/hdfs_data’
+removed directory: ‘/scratch/bhaviksamir/39055385/pids’
+removed ‘/scratch/bhaviksamir/39055385/logs/spark-bhaviksamir-org.apache.spark.deploy.worker.Worker-1-comet-14-02.sdsc.edu.out’
+removed ‘/scratch/bhaviksamir/39055385/logs/yarn-bhaviksamir-nodemanager-comet-14-02.sdsc.edu.log’
+removed ‘/scratch/bhaviksamir/39055385/logs/hadoop-bhaviksamir-datanode-comet-14-02.sdsc.edu.out’
+removed ‘/scratch/bhaviksamir/39055385/logs/SecurityAuth-bhaviksamir.audit’
+removed directory: ‘/scratch/bhaviksamir/39055385/logs/userlogs’
+removed ‘/scratch/bhaviksamir/39055385/logs/hadoop-bhaviksamir-datanode-comet-14-02.sdsc.edu.log’
+removed ‘/scratch/bhaviksamir/39055385/logs/yarn-bhaviksamir-nodemanager-comet-14-02.sdsc.edu.out’
+removed directory: ‘/scratch/bhaviksamir/39055385/logs’
