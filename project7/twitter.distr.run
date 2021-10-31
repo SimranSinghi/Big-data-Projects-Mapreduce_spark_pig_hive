@@ -1,0 +1,32 @@
+#!/bin/bash
+#SBATCH -A uot143
+#SBATCH --job-name="twitter"
+#SBATCH --output="twitter.distr.out"
+#SBATCH --partition=debug
+## allocate 2 nodes for the Hadoop cluster: 2 datanodes, from which 1 is namenode
+#SBATCH --nodes=2
+#SBATCH --ntasks-per-node=1
+#SBATCH --mem=5G
+#SBATCH --export=ALL 
+#SBATCH --time=29
+
+
+export HIVE_HOME=/oasis/projects/nsf/uot143/fegaras/apache-hive-2.1.0-bin
+export HADOOP_CONF_DIR=/home/$USER/cometcluster
+
+module load hadoop/2.6.0
+export JAVA_HOME=/lib/jvm/java
+myhadoop-configure.sh
+start-dfs.sh
+start-yarn.sh
+
+export HIVE_OPTS="--hiveconf hive.exec.mode.local.auto=false --hiveconf javax.jdo.option.ConnectionURL=jdbc:derby:;databaseName=/$HOME/metastore_db;create=true"
+
+hadoop fs -mkdir -p /user/hive/warehouse
+hadoop fs -chmod g+w /user/hive/warehouse
+
+$HIVE_HOME/bin/hive -f twitter.hql --hiveconf G=/oasis/projects/nsf/uot143/fegaras/large-twitter.csv /user/$USER/large-twitter.csv
+
+stop-yarn.sh
+stop-dfs.sh
+myhadoop-cleanup.sh
