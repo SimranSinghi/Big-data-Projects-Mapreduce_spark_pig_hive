@@ -1,0 +1,11 @@
+#!/bin/bash
+
+rm -rf join.jar classes
+
+module load hadoop/2.6.0 spark/1.5.2
+
+mkdir -p classes
+javac -d classes -cp classes:`ls $SPARK_HOME/lib/spark-assembly*.jar` src/main/java/JoinSpark.java
+jar cf join.jar -C classes .
+
+echo "end"
